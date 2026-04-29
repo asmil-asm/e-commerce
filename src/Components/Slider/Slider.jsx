@@ -7,14 +7,13 @@ import { CiHeart } from "react-icons/ci";
 import { SlBasket } from "react-icons/sl";
 import { IoIosShareAlt } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
-import { Link,useNavigate} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import {Usedata } from '../../Context/Context';
 import { GrValidate } from "react-icons/gr";
 import toast from 'react-hot-toast';
 import  Message from '../Message/Message'
 const Slider = () => {
    const {products,categories,cartItem,setCartItem,favorites,setFavorites,Scroll_top}=Usedata();
-   const navigate=useNavigate();
 const addToCart=(item)=>{
     
   
