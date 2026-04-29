@@ -13,10 +13,10 @@ const Bottom= () => {
     const location=useLocation();
   
     const links=[
-        {title:'Home', link:'/'},
-{title:'About', link:'/about'},
-{title:'Blog', link:'/blog'},
- {title:'Contact', link:'/contact'}
+        {title:'Home', link:'/e-commerce'},
+{title:'About', link:'e-commerce/about'},
+{title:'Blog', link:'e-commerce/blog'},
+ {title:'Contact', link:'e-commerce/contact'}
 
 
 
@@ -57,7 +57,7 @@ setMenu(!menu)
 <div className="select-categories">
     <div className={`categories ${menu?'active':''}`} >
     {category.map((category,index)=>(
-<Link   key={index} className="categroy" to={`category/${category.slug}`}><div >{category.name}
+<Link   key={index} className="categroy" to={`/e-commerce/category/${category.slug}`}><div >{category.name}
 </div>   
 </Link> 
 ))}
@@ -71,7 +71,7 @@ setMenu(!menu)
    </nav>
    <div className="links">
   {links.map((link,index)=>(
-        <NavLink onClick={Scroll_top} key={index} to={link.link}>{link.title}</NavLink>
+        <Link onClick={()=>Scroll_top()}  key={index} to={link.link}>{link.title}</Link>
   ))}
   </div>
   {/* Mobile Links */}
@@ -80,7 +80,7 @@ setMenu(!menu)
 
    <div className={`list-mobile ${listMobile?'active':''}`}>
      {links.map((link,index)=>(
-        <NavLink onClick={Scroll_top} key={index} to={link.link}>{link.title}</NavLink>
+        <Link onClick={()=>Scroll_top()} key={index} to={link.link}>{link.title}</Link>
   ))}
    <div className="login-Mobile">
    

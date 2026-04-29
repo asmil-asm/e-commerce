@@ -9,16 +9,16 @@ const Top = () => {
   return (
     <div className='top'>
         <div>
-           <Link onClick={Scroll_top} to='/'> <img src={logo} alt="not found" /></Link>
+           <Link onClick={Scroll_top} to='/e-commerce'> <img src={logo} alt="not found" /></Link>
         </div>
     <Search/>
         <div className="icons">
-        <Link onClick={Scroll_top} to={'/favorites'}>
+        <Link onClick={Scroll_top} to={'e-commerce/favorites'}>
         <div className='icon'><CiHeart />
         <span >{favorites.length}</span>
         </div>
         </Link>
-          <Link onClick={Scroll_top} to={'/cart'}>
+          <Link onClick={Scroll_top} to={'e-commerce/cart'}>
             <div className='icon'><SlBasket />
             <span >{cartItem.length}</span></div>
           </Link>
@@ -27,4 +27,4 @@ const Top = () => {
   )
 }
 
-export default Top
+export default Top 

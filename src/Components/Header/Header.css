@@ -75,8 +75,7 @@ header{
     max-md:left-3
 }
 .bottom nav  .active{
-        clip-path: polygon(0 0,100% 0, 100% 100% , 0 100%);
-
+clip-path: polygon(0 0,100% 0, 100% 100% , 0 100%);
 }
 .bottom nav .categories .categroy{
     @apply text-[color:var(--color-main)]  mt-2 p-2 text-center hover:bg-gray-400 

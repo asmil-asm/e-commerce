@@ -4,16 +4,16 @@ import { Usedata } from '../../Context/Context';
 const Footer=()=> {
   const {Scroll_top}=Usedata()
   const links_pages=[
-    {title:'Home',link:'/'},
-    {title:'About',link:'/about'},
-    {title:'Blog',link:'/blog'},
-    {title:'Contact',link:'/contact'}
+    {title:'Home',link:'/e-commerce'},
+    {title:'About',link:'e-commerce/about'},
+    {title:'Blog',link:'e-commerce/blog'},
+    {title:'Contact',link:'e-commerce/contact'}
   ]
   const links_help=[
-    {title:"Help Center",link:'/'},
-        {title:"Returns",link:'/'},
-       {title:"Shipping",link:'/'},
-       {title:"FAQs",link:'/'}
+    {title:"Help Center",link:'/e-commerce'},
+        {title:"Returns",link:'/e-commerce'},
+       {title:"Shipping",link:'/e-commerce'},
+       {title:"FAQs",link:'/e-commerce'}
 
 
   ]

@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState,useEffect, use } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { useNavigate,Link, useLocation } from "react-router-dom";
 import axios from "axios";
@@ -11,7 +11,7 @@ const Search = () => {
     const handleSearch=(item)=>{
 item.preventDefault();
 if(search.trim())
-{navigate(`/search?query=${encodeURIComponent(search.trim())}`)}
+{navigate(`/e-commerce/search?query=${encodeURIComponent(search.trim())}`)}
 setSuggestion([])
     }
     useEffect(()=>{
@@ -48,12 +48,12 @@ return;
         </form>
         {suggestion.length > 0 && (<ul className="suggestion">
             {suggestion.map((item,index)=>(
-              <Link to={`/product/${item.id}`} key={index}>
+              <div onClick={()=>navigate(`/e-commerce/product/${item.id}`)} key={index}>
                 <li >
 <img src={item.images[0]} alt='' />
 <h2>{item.title}</h2>
                 </li>
-              </Link>
+              </div>
             ))}
         </ul>)}
    </div>

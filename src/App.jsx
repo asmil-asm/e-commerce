@@ -31,15 +31,17 @@ return (
      }} />
      <AnimatePresence mode='wait'>
     <Routes>
-<Route path='/' element={<Home/>} />
-<Route path="/product/:id" element={<Products />} />
-<Route path="/cart" element={<Cart/>}/>
-<Route path="/favorites" element={<Favorites/>}/>
-<Route path='/about' element={<About/>} />
-<Route path='/blog' element={<Blog/>}/>
-<Route path='/contact' element={<Contact/>}/>
-<Route path='/category/:category' element={<Categories/>} />
-<Route path="/search" element={<Searching />} />
+<Route path='/e-commerce' element={<Home/>} />
+<Route path="e-commerce/product/:id" element={<Products />} />
+<Route path="e-commerce/cart" element={<Cart/>}/>
+<Route path="e-commerce/favorites" element={<Favorites/>}/>
+<Route path='e-commerce/about' element={<About/>} />
+<Route path='e-commerce/blog' element={<Blog/>}/>
+<Route path='e-commerce/contact' element={<Contact/>}/>
+<Route path='e-commerce/category/:category' element={<Categories/>} />
+<Route path="e-commerce/search" element={<Searching />} />
+
+
     </Routes>
     </AnimatePresence>
  <Footer/>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './Categories.css'
 import axios from 'axios'
-import { useParams ,Link  } from 'react-router-dom'
+import { useParams ,Link,useNavigate } from 'react-router-dom'
 import { Usedata } from '../../Context/Context'
 import { FaStar } from "react-icons/fa";
 import { SlBasket } from "react-icons/sl";
@@ -16,6 +16,7 @@ import { GrValidate } from "react-icons/gr";
 
 const Categories = () => {
         const {category}=useParams();
+        const navigate=useNavigate();
         const{favorites,setFavorites,loading,setLoading,setCartItem,cartItem}=Usedata();
     const [filter,setFilter]=useState([])
     useEffect(()=>{
@@ -71,7 +72,7 @@ const addToFavorites=(item)=>{
        return (
 
        <div className="item" key={index}>
-<Link to={`/product/${item.id}`} >
+<div onClick={()=> navigate(`/e-commerce/product/${item.id}`)}  >
 <div className='inCart'>
    {isIncart && (
         <div className="added">
@@ -92,7 +93,7 @@ const addToFavorites=(item)=>{
 price
 }</div>
 </div>
-</Link>
+</div>
 <div className="add-product"><SlBasket
                           className={`icon ${isIncart ? 'isAdd' : ''}`}
                           onClick={() => addToCart(item)}

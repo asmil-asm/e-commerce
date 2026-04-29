@@ -1,6 +1,6 @@
 import { Usedata } from "../../Context/Context"
 import './Favorites.css'
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { SlBasket } from "react-icons/sl";
 import { CiHeart } from "react-icons/ci";
@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 import { GrValidate } from "react-icons/gr";
 
 const Favorites = () => {
+    const navigate=useNavigate();
     const {favorites,setFavorites,setCartItem,cartItem}=Usedata();
  const addToCart=(item)=>{
     
@@ -44,7 +45,7 @@ setFavorites(prevItem=>prevItem.filter((item)=>item.id !=id))
             const isInFavorites=favorites.some((i)=>i.id===item.id)
        return (
        <div className="item" key={index}>
-<Link to={`/product/${item.id}`} >
+<div onClick={()=>navigate(`/e-commerce/product/${item.id}`)} >
 <div className='inCart'>
    {isIncart && (
         <div className="added">
@@ -64,7 +65,7 @@ setFavorites(prevItem=>prevItem.filter((item)=>item.id !=id))
 price
 }</div>
 </div>
-</Link>
+</div>
 <div className="add-product">
 <SlBasket 
     className={`icon ${isIncart ? 'isAdded' : ''}`} 

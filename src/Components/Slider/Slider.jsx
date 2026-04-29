@@ -75,7 +75,7 @@ slidesPerView={'auto'}
             <span>In Cart</span>
         </div>
     )}
-<Link onClick={Scroll_top} to={`/product/${item.id}`} >
+<Link onClick={Scroll_top} to={`product/${item.id}`} >
 <div className="data">
     <img src={item.images[0]} alt="not found" />
     <h3>{item.title}</h3>
