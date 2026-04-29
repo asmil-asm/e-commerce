@@ -40,8 +40,6 @@ return (
 <Route path='/contact' element={<Contact/>}/>
 <Route path='/category/:category' element={<Categories/>} />
 <Route path="/search" element={<Searching />} />
-
-
     </Routes>
     </AnimatePresence>
  <Footer/>
