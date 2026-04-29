@@ -1,0 +1,54 @@
+@import "tailwindcss";
+footer{
+    @apply bg-[#8068bd] text-white  p-3   }
+footer .info{
+    @apply max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10
+}
+footer .info .title h2{
+    @apply text-2xl font-bold mb-4
+}
+footer .info .title p{
+    @apply text-sm text-gray-200 mt-3
+}
+footer .info .links h3{
+    @apply font-semibold mb-2
+}
+footer .info .links ul{
+    @apply space-y-2 text-sm
+}
+footer .info .links  a{
+    @apply text-white hover:text-[var(--color-shadow)] cursor-pointer
+}
+footer .info .message {
+    @apply flex flex-col
+}
+footer .info .message h3{
+    @apply font-semibold mb-4
+}
+footer .info .message p{
+    @apply  text-sm mb-4 text-gray-200 
+}
+footer .info .message form{
+    @apply flex flex-col min-lg:flex-row gap-3 
+}
+footer .info .message form input{
+    @apply px-3 py-2 rounded-xl text-gray-900 w-full
+    border-[var(--color-shadow)] border-1
+
+}
+footer .info .message form button{
+    @apply bg-white text-[var(--color-main)] px-4 py-2 rounded-md font-semibold hover:bg-gray-100 cursor-pointer
+}
+footer .bottom-bar{
+    @apply border-t border-white/20 pt-2
+}
+footer .bottom-bar .data{
+    @apply max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-200
+}
+footer .bottom-bar .data .links{
+    @apply flex space-x-4 mt-2 md:mt-0
+
+}
+footer .bottom-bar .data .links a{
+    @apply hover:text-[var(--color-shadow)]
+}

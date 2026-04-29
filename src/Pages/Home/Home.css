@@ -1,0 +1,11 @@
+@import "tailwindcss";
+.home{
+    @apply w-full mt-[150px] p-5 relative
+}
+.home .loading{
+    @apply absolute w-full h-full  top-0 left-0 bg-black/30
+    flex justify-center items-center z-20 text-[var(--color-main)]  text-2xl font-[600] gap-x-3
+    
+}
+
+

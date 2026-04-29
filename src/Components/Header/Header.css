@@ -1,0 +1,142 @@
+@import "tailwindcss";
+/* top-header  */
+header{
+    @apply fixed top-0 left-0 w-full z-10 
+}
+.top{
+    padding: 0px 30px;
+    @apply flex justify-between items-center  flex-wrap bg-white
+}
+.top img{
+    @apply w-[100px] cursor-pointer max-md:w-[70px] 
+}
+.top .search-box{
+    @apply relative
+}
+.top .search {
+    @apply flex items-center relative
+}
+.suggestion{
+    @apply p-1 bg-white
+    flex flex-col text-center absolute w-full
+}
+.suggestion li{
+    @apply border-b-1 border-[var(--color-main)]
+    pb-1 flex gap-x-2 cursor-pointer hover:bg-[var(--color-secondry)] hover:text-white
+}
+.suggestion li img{
+    @apply w-[20px] 
+}
+.suggestion li h2{
+    @apply text-[15px] text-[var(--color-dark)] 
+}
+.top .search input{
+    @apply bg-[#eee] border-1 border-[color:var(--color-main)]  rounded-2xl w-[500px] p-2
+    max-md:w-[200px] max-sm:w-[150px] max-sm:placeholder:text-[10px]
+    rounded-r-none 
+}
+.top .search button{
+    @apply bg-[color:var(--color-main)]  text-2xl text-white absolute h-full top-0 -right-4 p-2
+     rounded-br-2xl rounded-tr-2xl  flex justify-center items-center cursor-pointer
+}
+.top .icons{
+    @apply flex items-center gap-x-2.5 cursor-pointer  max-sm:ml-3
+}
+.top .icons .icon{
+    @apply text-2xl cursor-pointer text-[color:var(--color-main)]   max-md:text-xl relative hover:text-[var(--color-secondry)]
+}
+.top .icons .icon span{
+    @apply absolute -top-2 text-[12px] -right-2
+}
+/* bottom-header */
+.bottom{
+    
+    padding: 0px 20px;
+    @apply flex justify-between items-center bg-[color:var(--color-main)]   text-white max-md:p-5
+}
+.bottom nav{
+    @apply flex items-center gap-x-4
+}
+.bottom nav .list{
+    @apply flex items-center  gap-x-1
+}
+.bottom nav p{
+    @apply cursor-pointer 
+}
+.bottom nav .select-categories{
+    @apply relative
+}
+.bottom nav .categories{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    @apply flex flex-col absolute w-[200px] -left-10 top-7
+    bg-white border-1 border-[color:var(--color-main)]  p-2 overflow-y-auto h-[400px]
+    duration-200
+    max-md:w-fit
+    max-md:left-3
+}
+.bottom nav  .active{
+        clip-path: polygon(0 0,100% 0, 100% 100% , 0 100%);
+
+}
+.bottom nav .categories .categroy{
+    @apply text-[color:var(--color-main)]  mt-2 p-2 text-center hover:bg-gray-400 
+    border-[color:var(--color-main)]  border-b-1
+    font-bold hover:text-white
+    
+}
+
+.bottom nav .categories .categroy:last-child{
+    @apply border-b-0
+}
+.bottom .links{
+    @apply  flex items-center gap-x-5 max-md:hidden
+}
+.bottom .links a{
+    padding: 15px 20px;
+    @apply h-full  hover:bg-black/20
+}
+.bottom .links  .active{
+    @apply bg-black/20
+}
+.bottom .login{
+    @apply flex items-center gap-x-2 text-2xl max-md:hidden  
+}
+.bottom .login .icon{
+    @apply cursor-pointer
+}
+
+
+/* Mobile links */
+.links-mobile{
+    @apply hidden max-md:block
+     relative 
+}
+
+.links-mobile .list-mobile{
+       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    @apply flex flex-col absolute w-fit -left-13 top-10
+    bg-white border-1 border-[color:var(--color-main)]  p-2 overflow-y-auto 
+    duration-200 
+}
+.links-mobile .list-mobile  a{
+    @apply h-full
+}
+.links-mobile .list-mobile .active{
+      @apply bg-black/20 text-white
+
+}
+.links-mobile .icon-Mobile{
+    @apply cursor-pointer text-2xl
+}
+.links-mobile  .active{
+        clip-path: polygon(0 0,100% 0, 100% 100% , 0 100%);
+
+}
+.links-mobile .list-mobile a{
+    @apply text-[#8068bd] mt-2 p-2 text-center hover:bg-black/20 border-[color:var(--color-main)]  border-b-1
+    font-bold hover:text-white
+}
+.links-mobile .login-Mobile{
+    @apply flex mt-2 text-[color:var(--color-main)]  justify-center items-center
+    gap-x-3 text-xl
+}

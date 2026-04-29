@@ -1,0 +1,71 @@
+@import "tailwindcss";
+.cart{
+    @apply  flex justify-center items-center mb-10
+}
+
+.cart .order{
+@apply border-1 border-[var(--color-main)] mt-[200px]
+w-[600px] h-[400px] p-7 rounded-2xl overflow-y-auto
+max-md:mt-[300px] max-md:w-[300px]
+}
+.cart .order h2{
+    @apply text-2xl text-[var(--color-secondry)] font-bold
+    border-b-1 border-[var(--color-main)] pb-4 
+}
+.cart .order .items{
+    @apply flex flex-col gap-y-2 mt-3
+}
+.cart .order .items .empty{
+    @apply  text-xl font-bold
+    text-[var(--color-main)]
+}
+.cart .order .items .item{
+    @apply flex justify-between items-center border-b-1
+    border-[var(--color-main)] pb-5 mt-1
+}
+.cart .order .items .item .data {
+    @apply flex items-center gap-x-3
+}
+.cart .order .items .item .data img{
+    @apply w-[100px]
+}
+.cart .order .items .item .data .text h3{
+    @apply text-[18px] text-[#333]
+}
+.cart .order .items .item .data .text .price{
+    @apply text-[18px] text-[var(--color-shadow)] mt-2
+}
+.cart .order .items .item .data .text .amount{
+    @apply flex items-center gap-x-3 mt-3
+}
+.cart .order .items .item .data .text .amount button{
+    @apply bg-[var(--color-main)] text-white py-0.5
+    px-2 rounded-[5px] w-[30px] cursor-pointer font-bold
+    hover:bg-[var(--color-secondry)]
+}
+.cart .order .items .item .data .text .amount span{
+    @apply text-[var(--color-secondry)]
+}
+.cart .order .items .item .delete{
+    @apply text-2xl hover:text-red-500 text-[var(--color-main)]
+    cursor-pointer
+}
+.cart .order .check{
+    @apply mt-5 
+}
+.cart .order .check .total{
+    @apply flex justify-between items-center 
+}
+.cart .order .check .total p{
+    @apply text-xl text-[var(--color-main)]
+    font-bold
+}
+.cart .order .check .total span{
+    @apply text-xl text-[var(--color-shadow)]
+    font-bold
+}
+.cart .order .check button{
+    @apply w-full bg-[var(--color-main)]
+    text-center font-bold text-xl p-1 rounded-xl 
+    mt-3 text-white cursor-pointer hover:bg-[var(--color-secondry)]
+}

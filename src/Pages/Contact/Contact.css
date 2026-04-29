@@ -1,0 +1,43 @@
+@import "tailwindcss";
+.contact {
+    @apply  mt-[200px]
+}
+.contact .data{
+    @apply p-5
+}
+.contact .info{
+    @apply flex  justify-evenly gap-4
+    max-md:flex-col max-md:items-center
+}
+
+.contact .info div h2{
+    @apply text-3xl font-semibold text-[var(--color-main)] mb-6
+}
+.contact .info div p{
+    @apply text-gray-600 mb-4
+}
+.contact .info .contecting{
+    @apply space-y-4 text-gray-700
+}
+
+.contact .info form{
+    @apply w-1/2 bg-gray-50 p-8 rounded-2xl shadow-md
+    max-md:w-full mb-5
+}
+.contact .info form div{
+    @apply mb-6
+}
+.contact .info form label{
+    @apply block mb-2 font-medium text-[var(--color-main)]  
+}
+.contact .info form  input,.contact .info form textarea{
+    @apply w-full px-4 py-3 rounded-xl border  
+    focus:ring-2 
+    focus:ring-[var(--color-secondry)] border-[var(--color-shadow)]
+    transition
+}
+.contact .info form button{
+    @apply w-full bg-[var(--color-secondry)] text-white py-3 rounded-xl font-medium hover:opacity-90 transition cursor-pointer
+}
+
+            

@@ -1,0 +1,17 @@
+ @import "tailwindcss";
+ .message {
+    @apply flex items-center gap-x-3
+}
+
+ .message .text {
+     @apply text-sm 
+ }
+
+   .message .text p{
+    @apply text-[#333] mt-2
+   }
+      .message .text button{
+        @apply bg-[var(--color-main)]
+        text-white font-bold cursor-pointer p-1
+        rounded-[5px] mt-3
+      }

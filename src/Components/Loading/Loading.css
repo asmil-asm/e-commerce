@@ -1,0 +1,4 @@
+@import "tailwindcss";
+.loading {
+    @apply fixed top-0 left-0 w-full h-full flex items-center justify-center text-2xl font-bold text-[var(--color-main)] bg-white z-50;
+}

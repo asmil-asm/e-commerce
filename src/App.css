@@ -1,0 +1,4 @@
+@import "tailwindcss";
+.main{
+    @apply w-full h-full relative
+}

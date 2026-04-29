@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+      .slider{
+    @apply mt-[100px] p-5
+}
+.slider .text{
+    @apply border-b-2 border-[var(--color-main)] pb-5 max-sm:text-center
+}
+.slider .text h2{
+    @apply text-[var(--color-main)] text-3xl font-bold capitalize
+}
+.slider .text p{
+    @apply text-xl text-gray-600 mt-5 mb-5
+}
+.slider .product {
+    @apply border-1 border-gray-300 w-[300px] p-4  mt-5
+    cursor-pointer relative  hover:border-[var(--color-main)]
+    overflow-hidden rounded-xl
+}
+.slider  .inCart{
+    @apply border-[var(--color-secondry)]
+}
+.slider  .inCart .added{
+    @apply flex gap-1 items-center absolute
+    text-sm duration-200
+    top-2 left-2 text-[var(--color-secondry)] bg-[var(--color-shadow)] p-0.5 rounded
+}
+
+.slider .product img{
+    @apply w-[200px] m-auto h-full 
+}
+.slider .product h3{
+    @apply mt-5 text-xl font-[500] line-clamp-1 text-[#333]
+}
+.slider .product .stars{
+    @apply flex text-yellow-500 mt-5
+}
+.slider .product .price{
+    @apply text-xl mt-4 text-[var(--color-main)] font-[500]
+}
+.slider .product .add-product{
+    @apply absolute -right-10  flex flex-col gap-y-5 top-[20%]
+     duration-300
+}
+.slider .product .add-product .icon{
+    @apply  text-[var(--color-main)] w-8 h-8 rounded-full
+ bg-[#eee] p-1.5 hover:bg-[var(--color-main)]
+ hover:text-[#eee] 
+}
+.slider .product .add-product .isAdded{
+    @apply bg-[var(--color-main)] 
+text-white pointer-events-none 
+}
+.slider .product:hover  .add-product{
+    @apply right-3 
+}
+.slider .swiper-button-prev,
+.slider .swiper-button-next{
+    @apply text-[var(--color-main)]
+    hover:text-[var(--color-secondry)]
+    
+}

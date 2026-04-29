@@ -1,0 +1,57 @@
+@import "tailwindcss";
+.searching{
+    @apply  p-5
+}
+.searching .items{
+    @apply mt-[200px] flex justify-evenly items-center
+    flex-wrap gap-5  my-[50px]
+}
+.searching .items .item {
+ @apply border-1 border-gray-300 w-[300px] p-4  mt-5
+    cursor-pointer relative  hover:border-[var(--color-main)]
+    overflow-hidden rounded-xl
+}
+.searching .items .item .inCart{
+    @apply border-[var(--color-secondry)]
+}
+.searching .items .item  .inCart .added{
+    @apply flex gap-1 items-center absolute
+    text-sm duration-200
+    top-2 left-2 text-[var(--color-secondry)] bg-[var(--color-shadow)] p-0.5 rounded
+}
+
+.searching .items .item img{
+    @apply w-[200px] m-auto h-full 
+}
+.searching .items .item h3{
+        @apply mt-5 text-xl font-[500] line-clamp-1 text-[#333]
+
+}
+.searching .items .item .stars{
+        @apply flex text-yellow-500 mt-5
+
+}
+.searching .items .item .price{
+    @apply text-xl mt-4 text-[var(--color-main)] font-[500]
+}
+.searching .items .item .add-product{
+    @apply absolute -right-10  flex flex-col gap-y-5 top-[20%]
+     duration-300
+}
+.searching .items .item .add-product .icon{
+    @apply  text-[var(--color-main)] w-8 h-8 rounded-full
+ bg-[#eee] p-1.5 hover:bg-[var(--color-main)]
+ hover:text-[#eee] 
+}
+.searching .items .item:hover  .add-product{
+    @apply right-3 
+}
+.searching  .items .item  .add-product .isAdded{
+@apply bg-[var(--color-main)] 
+text-white pointer-events-none
+}
+
+.not-found{
+    @apply text-4xl text-[var(--color-light)]
+    text-center mt-[100px] font-bold
+}

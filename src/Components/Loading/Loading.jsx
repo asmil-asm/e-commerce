@@ -1,0 +1,9 @@
+import { FiLoader } from "react-icons/fi";
+
+const Loading = () => {
+  return (
+    <div className='loading'>Loading <FiLoader/></div>
+  )
+}
+
+export default Loading

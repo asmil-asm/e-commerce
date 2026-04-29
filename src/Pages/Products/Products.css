@@ -1,0 +1,57 @@
+@import "tailwindcss";
+.product {
+    @apply mt-[300px] p-4 
+}
+
+.product .info {
+  @apply flex  gap-x-3 items-center
+  max-md:flex-col max-md:text-center
+}
+.product .info img {
+  @apply w-[350px] h-[350px] rounded-full object-cover
+  max-md:w-[200px] max-md:w-[200px];
+}
+.product .info .text {
+  @apply flex flex-col gap-y-3 max-md:mt-7;
+}
+.product .info .text h3 {
+  @apply text-2xl font-bold text-[var(--color-main)] ;
+}
+.product .info .text .star {
+  @apply  flex items-center gap-x-1 text-yellow-400
+  max-md:m-auto;
+}
+.product .info .text h2 {
+  @apply text-xl font-bold text-[var(--color-main)] mt-2 ;
+} 
+.product .info .text p {
+  @apply text-gray-500 text-[18px] max-md:text-[15px]
+  
+}
+.product .info .text p mark {
+  @apply bg-transparent text-[var(--color-main)] font-bold;
+}
+.product .info .text span {
+  @apply text-[var(--color-main)] text-[18px] mt-2 font-bold;
+}
+
+.product .info .text .btns {
+  @apply flex gap-x-3 mt-4
+  max-md:justify-center
+  
+} 
+.product .info .text .btns button{
+    @apply flex gap-x-1 items-center justify-center text-xl px-4 py-2 rounded-md text-white bg-[var(--color-main)] hover:bg-[var(--color-secondry)]  duration-300 cursor-pointer;
+}
+.product .info .text .btns .isAdded{
+  @apply bg-[var(--color-shadow)] hover:bg-[var(--color-shadow)]
+  cursor-no-drop  pointer-events-none  transition-all
+}
+.product  .images{
+    @apply flex gap-x-3 my-10 items-center max-md:gap-x-8
+    max-md:flex-wrap max-md:justify-center ;
+}
+.product  .images img{
+    @apply w-[200px] h-[200px] rounded-md object-cover cursor-pointer
+    max-md:w-[100px] max-md:w-[100px]
+}
